@@ -1,0 +1,90 @@
+name: Autophagy
+options:
+  bundleIdPrefix: cloud.buggygames.autophagy
+  deploymentTarget:
+    iOS: "17.0"
+    watchOS: "10.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    GENERATE_INFOPLIST_FILE: YES
+
+targets:
+  Autophagy:
+    type: application
+    platform: iOS
+    sources:
+      - path: Autophagy
+      - path: Shared
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Autophagy
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        PRODUCT_BUNDLE_IDENTIFIER: cloud.buggygames.autophagy.app
+    entitlements:
+      path: Autophagy/Autophagy.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.cloud.buggygames.autophagy.app
+    dependencies:
+      - target: AutophagyWidget
+      - target: Autophagy Watch App
+
+  Autophagy Watch App:
+    type: application
+    platform: watchOS
+    sources:
+      - path: Autophagy Watch App
+      - path: Shared
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Autophagy
+        INFOPLIST_KEY_WKCompanionAppBundleIdentifier: cloud.buggygames.autophagy.app
+        PRODUCT_BUNDLE_IDENTIFIER: cloud.buggygames.autophagy.app.watchkitapp
+    entitlements:
+      path: Autophagy Watch App/AutophagyWatch.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.cloud.buggygames.autophagy.app
+    dependencies:
+      - target: AutophagyWatchWidget
+
+  AutophagyWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: AutophagyWidget
+      - path: Shared/FastingState.swift
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: cloud.buggygames.autophagy.app.widget
+        INFOPLIST_KEY_CFBundleDisplayName: Fasting Widget
+        INFOPLIST_KEY_NSHumanReadableCopyright: ""
+        INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: AutophagyWidget/AutophagyWidgetExtension.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.cloud.buggygames.autophagy.app
+
+  AutophagyWatchWidget:
+    type: app-extension
+    platform: watchOS
+    sources:
+      - path: AutophagyWatchWidget
+      - path: Shared/FastingState.swift
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: cloud.buggygames.autophagy.app.watchkitapp.widget
+        INFOPLIST_KEY_CFBundleDisplayName: Fasting Widget
+        INFOPLIST_KEY_NSHumanReadableCopyright: ""
+        INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier: com.apple.widgetkit-extension

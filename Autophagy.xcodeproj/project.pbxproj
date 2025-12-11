@@ -1,0 +1,751 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01F189AAC0AD68A281D21017 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942094245A2529D72252A7F5 /* ContentView.swift */; };
+		025A5B30AAE793225413433C /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5FA93E73915B554C15266A /* WidgetBundle.swift */; };
+		05A37CDA4917906A5DADE614 /* FastingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630450851DDC7E0E19BB996B /* FastingManager.swift */; };
+		139876B70F947C170136CF5A /* FastingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C41102E11A921EE0F27C3DB /* FastingState.swift */; };
+		1C47CB6488883A908DB2627E /* Autophagy Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2186A972C0DF171938AE66A0 /* Autophagy Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		25734D52FD6897459F9380CC /* WidgetAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43195FC73A37B6B97AE73C0C /* WidgetAssets.xcassets */; };
+		29963A0BF8B2A4565EF82DA9 /* FastingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C41102E11A921EE0F27C3DB /* FastingState.swift */; };
+		29EC2C96FD709010BA771D6F /* AutophagyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792166306C7F1D595A316ABC /* AutophagyApp.swift */; };
+		311591FFD8DFB74590DBA50F /* AutophagyWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890EA1FA529E3E61981EF721 /* AutophagyWatchApp.swift */; };
+		332C4DFA83C7EF5331D172B1 /* AutophagyWatchWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EFFE00A6430EE748A0DFE16F /* AutophagyWatchWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3675DC7CF61DF2C134558A45 /* FastingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630450851DDC7E0E19BB996B /* FastingManager.swift */; };
+		38ED02F1FF2714297593FF05 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A518C0565133AA7B8F51DA8 /* WatchConnectivityManager.swift */; };
+		4FBCE464C2AEBAB6D20D559E /* FastingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C41102E11A921EE0F27C3DB /* FastingState.swift */; };
+		5B6F63B71A5014EA35BDA217 /* FastingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C41102E11A921EE0F27C3DB /* FastingState.swift */; };
+		82EEEBAA60E388E88C1354DB /* AutophagyWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3E90F718583EC111CE977B52 /* AutophagyWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A7651D8FFA1F0BC8F30FAEAB /* WatchWidgetAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF45D2DAD09E367D745243 /* WatchWidgetAssets.xcassets */; };
+		AB4FCCB892912A9E7026CFD8 /* WatchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70EA92C2CEEAA2B5C029880 /* WatchAssets.xcassets */; };
+		B28B28AEFE7B3BE545416F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D651EF9581D33062AF8FD4E /* Assets.xcassets */; };
+		BD9AFFB9564E73D6F0150917 /* WatchWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F436E226595A57DD3A7BCABF /* WatchWidget.swift */; };
+		C94C994BF503F1F2B7FDC4EB /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A518C0565133AA7B8F51DA8 /* WatchConnectivityManager.swift */; };
+		DE37BFBC08DC7F6C4774290B /* AutophagyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CF89762805432D9C6EBFA /* AutophagyWidget.swift */; };
+		DFF3C4C8DD5948E1B3988106 /* WatchWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E813F5371E6539C6E3888 /* WatchWidgetBundle.swift */; };
+		FEB649D3EC1FD41DC6AE9735 /* WatchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC1BE17BF4C3E5B0B2B833 /* WatchContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29C11A0DB32AFDDBCF132916 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66B82D083C9E5A846A510921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0555E8E1C24C01E9A3A324AF;
+			remoteInfo = "Autophagy Watch App";
+		};
+		3949283EC52858087F9806AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66B82D083C9E5A846A510921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C935F1FAA9312C0B29042F29;
+			remoteInfo = AutophagyWidget;
+		};
+		962B51D55A9D363FE1562238 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66B82D083C9E5A846A510921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF05EF5A1FF5CB36DF1C4E68;
+			remoteInfo = AutophagyWatchWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		09645836BF8D89B86112F2B2 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				332C4DFA83C7EF5331D172B1 /* AutophagyWatchWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD51A9E425BB535CE30A3FA2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1C47CB6488883A908DB2627E /* Autophagy Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC24E24BBD5AF7285F28CECE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				82EEEBAA60E388E88C1354DB /* AutophagyWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		068E7A276F20E4C9E22502CB /* Autophagy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Autophagy.entitlements; sourceTree = "<group>"; };
+		1D651EF9581D33062AF8FD4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2186A972C0DF171938AE66A0 /* Autophagy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Autophagy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E90F718583EC111CE977B52 /* AutophagyWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AutophagyWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		43195FC73A37B6B97AE73C0C /* WidgetAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WidgetAssets.xcassets; sourceTree = "<group>"; };
+		56AD7E554885171ACF07BF30 /* AutophagyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutophagyWidgetExtension.entitlements; sourceTree = "<group>"; };
+		630450851DDC7E0E19BB996B /* FastingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingManager.swift; sourceTree = "<group>"; };
+		6A518C0565133AA7B8F51DA8 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		6E5FA93E73915B554C15266A /* WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBundle.swift; sourceTree = "<group>"; };
+		792166306C7F1D595A316ABC /* AutophagyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutophagyApp.swift; sourceTree = "<group>"; };
+		7C41102E11A921EE0F27C3DB /* FastingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingState.swift; sourceTree = "<group>"; };
+		890EA1FA529E3E61981EF721 /* AutophagyWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutophagyWatchApp.swift; sourceTree = "<group>"; };
+		8ADF45D2DAD09E367D745243 /* WatchWidgetAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WatchWidgetAssets.xcassets; sourceTree = "<group>"; };
+		942094245A2529D72252A7F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95AC1BE17BF4C3E5B0B2B833 /* WatchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchContentView.swift; sourceTree = "<group>"; };
+		9CD32421EDEDDA8FA6A8BDCF /* AutophagyWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutophagyWatch.entitlements; sourceTree = "<group>"; };
+		BB7CF89762805432D9C6EBFA /* AutophagyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutophagyWidget.swift; sourceTree = "<group>"; };
+		C25E813F5371E6539C6E3888 /* WatchWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchWidgetBundle.swift; sourceTree = "<group>"; };
+		DE0400C34DF694938BABD7E4 /* Autophagy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autophagy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70EA92C2CEEAA2B5C029880 /* WatchAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WatchAssets.xcassets; sourceTree = "<group>"; };
+		EFFE00A6430EE748A0DFE16F /* AutophagyWatchWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AutophagyWatchWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F436E226595A57DD3A7BCABF /* WatchWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchWidget.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		134B28452F5CB61FE7E25B1A /* Autophagy Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				9CD32421EDEDDA8FA6A8BDCF /* AutophagyWatch.entitlements */,
+				890EA1FA529E3E61981EF721 /* AutophagyWatchApp.swift */,
+				E70EA92C2CEEAA2B5C029880 /* WatchAssets.xcassets */,
+				95AC1BE17BF4C3E5B0B2B833 /* WatchContentView.swift */,
+			);
+			path = "Autophagy Watch App";
+			sourceTree = "<group>";
+		};
+		199456DA5BD7316801613410 = {
+			isa = PBXGroup;
+			children = (
+				D62667C8C166596F2AA445C7 /* Autophagy */,
+				134B28452F5CB61FE7E25B1A /* Autophagy Watch App */,
+				7E7AEF9851D1BB1FF6EA2132 /* AutophagyWatchWidget */,
+				54D11788F625C4BAF5B8B8FD /* AutophagyWidget */,
+				552E5C48D9EA307716307C7E /* Shared */,
+				3FE3E75E7424CD3C97A0374B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FE3E75E7424CD3C97A0374B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2186A972C0DF171938AE66A0 /* Autophagy Watch App.app */,
+				DE0400C34DF694938BABD7E4 /* Autophagy.app */,
+				EFFE00A6430EE748A0DFE16F /* AutophagyWatchWidget.appex */,
+				3E90F718583EC111CE977B52 /* AutophagyWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54D11788F625C4BAF5B8B8FD /* AutophagyWidget */ = {
+			isa = PBXGroup;
+			children = (
+				BB7CF89762805432D9C6EBFA /* AutophagyWidget.swift */,
+				56AD7E554885171ACF07BF30 /* AutophagyWidgetExtension.entitlements */,
+				43195FC73A37B6B97AE73C0C /* WidgetAssets.xcassets */,
+				6E5FA93E73915B554C15266A /* WidgetBundle.swift */,
+			);
+			path = AutophagyWidget;
+			sourceTree = "<group>";
+		};
+		552E5C48D9EA307716307C7E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				630450851DDC7E0E19BB996B /* FastingManager.swift */,
+				7C41102E11A921EE0F27C3DB /* FastingState.swift */,
+				6A518C0565133AA7B8F51DA8 /* WatchConnectivityManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7E7AEF9851D1BB1FF6EA2132 /* AutophagyWatchWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F436E226595A57DD3A7BCABF /* WatchWidget.swift */,
+				8ADF45D2DAD09E367D745243 /* WatchWidgetAssets.xcassets */,
+				C25E813F5371E6539C6E3888 /* WatchWidgetBundle.swift */,
+			);
+			path = AutophagyWatchWidget;
+			sourceTree = "<group>";
+		};
+		D62667C8C166596F2AA445C7 /* Autophagy */ = {
+			isa = PBXGroup;
+			children = (
+				1D651EF9581D33062AF8FD4E /* Assets.xcassets */,
+				068E7A276F20E4C9E22502CB /* Autophagy.entitlements */,
+				792166306C7F1D595A316ABC /* AutophagyApp.swift */,
+				942094245A2529D72252A7F5 /* ContentView.swift */,
+			);
+			path = Autophagy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0555E8E1C24C01E9A3A324AF /* Autophagy Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E33CA2AB6818CE23807EECE /* Build configuration list for PBXNativeTarget "Autophagy Watch App" */;
+			buildPhases = (
+				4B493B0F08E9FDC503C59D98 /* Sources */,
+				242D6BF24F2A8D58A71DE2F9 /* Resources */,
+				09645836BF8D89B86112F2B2 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95CD16684FA93B62AA2CD38B /* PBXTargetDependency */,
+			);
+			name = "Autophagy Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Autophagy Watch App";
+			productReference = 2186A972C0DF171938AE66A0 /* Autophagy Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA3462EBB95523367B4545EF /* Autophagy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C8191F4F2367148F75295C7 /* Build configuration list for PBXNativeTarget "Autophagy" */;
+			buildPhases = (
+				D596C9CE0C2E11AB379F7A09 /* Sources */,
+				8BE2D78E7201F1C28274B727 /* Resources */,
+				CC24E24BBD5AF7285F28CECE /* Embed Foundation Extensions */,
+				BD51A9E425BB535CE30A3FA2 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2AC6B248EF888F27BD007BD /* PBXTargetDependency */,
+				387F65D5BDF862143E47669A /* PBXTargetDependency */,
+			);
+			name = Autophagy;
+			packageProductDependencies = (
+			);
+			productName = Autophagy;
+			productReference = DE0400C34DF694938BABD7E4 /* Autophagy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C935F1FAA9312C0B29042F29 /* AutophagyWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AE0D9764540F709FC604362 /* Build configuration list for PBXNativeTarget "AutophagyWidget" */;
+			buildPhases = (
+				48C9AC4049884FA45F05849B /* Sources */,
+				80310945276BCDBDBF4871A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutophagyWidget;
+			packageProductDependencies = (
+			);
+			productName = AutophagyWidget;
+			productReference = 3E90F718583EC111CE977B52 /* AutophagyWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		EF05EF5A1FF5CB36DF1C4E68 /* AutophagyWatchWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DCDDFD1235FC7735DE6AC21 /* Build configuration list for PBXNativeTarget "AutophagyWatchWidget" */;
+			buildPhases = (
+				694BD3B4A29AA9FE61E4341F /* Sources */,
+				3D86E4E5329438F9A3B88A4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutophagyWatchWidget;
+			packageProductDependencies = (
+			);
+			productName = AutophagyWatchWidget;
+			productReference = EFFE00A6430EE748A0DFE16F /* AutophagyWatchWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66B82D083C9E5A846A510921 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					0555E8E1C24C01E9A3A324AF = {
+						ProvisioningStyle = Automatic;
+					};
+					BA3462EBB95523367B4545EF = {
+						ProvisioningStyle = Automatic;
+					};
+					C935F1FAA9312C0B29042F29 = {
+						ProvisioningStyle = Automatic;
+					};
+					EF05EF5A1FF5CB36DF1C4E68 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8E77428810C99D8A4B709976 /* Build configuration list for PBXProject "Autophagy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 199456DA5BD7316801613410;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA3462EBB95523367B4545EF /* Autophagy */,
+				0555E8E1C24C01E9A3A324AF /* Autophagy Watch App */,
+				EF05EF5A1FF5CB36DF1C4E68 /* AutophagyWatchWidget */,
+				C935F1FAA9312C0B29042F29 /* AutophagyWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		242D6BF24F2A8D58A71DE2F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB4FCCB892912A9E7026CFD8 /* WatchAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D86E4E5329438F9A3B88A4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7651D8FFA1F0BC8F30FAEAB /* WatchWidgetAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80310945276BCDBDBF4871A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25734D52FD6897459F9380CC /* WidgetAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BE2D78E7201F1C28274B727 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B28B28AEFE7B3BE545416F8A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48C9AC4049884FA45F05849B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE37BFBC08DC7F6C4774290B /* AutophagyWidget.swift in Sources */,
+				29963A0BF8B2A4565EF82DA9 /* FastingState.swift in Sources */,
+				025A5B30AAE793225413433C /* WidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B493B0F08E9FDC503C59D98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				311591FFD8DFB74590DBA50F /* AutophagyWatchApp.swift in Sources */,
+				05A37CDA4917906A5DADE614 /* FastingManager.swift in Sources */,
+				139876B70F947C170136CF5A /* FastingState.swift in Sources */,
+				C94C994BF503F1F2B7FDC4EB /* WatchConnectivityManager.swift in Sources */,
+				FEB649D3EC1FD41DC6AE9735 /* WatchContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		694BD3B4A29AA9FE61E4341F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FBCE464C2AEBAB6D20D559E /* FastingState.swift in Sources */,
+				BD9AFFB9564E73D6F0150917 /* WatchWidget.swift in Sources */,
+				DFF3C4C8DD5948E1B3988106 /* WatchWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D596C9CE0C2E11AB379F7A09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EC2C96FD709010BA771D6F /* AutophagyApp.swift in Sources */,
+				01F189AAC0AD68A281D21017 /* ContentView.swift in Sources */,
+				3675DC7CF61DF2C134558A45 /* FastingManager.swift in Sources */,
+				5B6F63B71A5014EA35BDA217 /* FastingState.swift in Sources */,
+				38ED02F1FF2714297593FF05 /* WatchConnectivityManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		387F65D5BDF862143E47669A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0555E8E1C24C01E9A3A324AF /* Autophagy Watch App */;
+			targetProxy = 29C11A0DB32AFDDBCF132916 /* PBXContainerItemProxy */;
+		};
+		95CD16684FA93B62AA2CD38B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF05EF5A1FF5CB36DF1C4E68 /* AutophagyWatchWidget */;
+			targetProxy = 962B51D55A9D363FE1562238 /* PBXContainerItemProxy */;
+		};
+		C2AC6B248EF888F27BD007BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C935F1FAA9312C0B29042F29 /* AutophagyWidget */;
+			targetProxy = 3949283EC52858087F9806AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02F17CC4C749A07B29F16F93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fasting Widget";
+				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.buggygames.autophagy.app.watchkitapp.widget;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		4909606A0F818716463F8BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AutophagyWidget/AutophagyWidgetExtension.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fasting Widget";
+				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.buggygames.autophagy.app.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F4E3CBB330C2FC210F241DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4YN4S8KBCP;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		67F273003581B1D10196DFCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Autophagy/Autophagy.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Autophagy;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.buggygames.autophagy.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6C4FD532F99820B46539B599 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AutophagyWidget/AutophagyWidgetExtension.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fasting Widget";
+				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.buggygames.autophagy.app.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		727AC743BE083D2439665E7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fasting Widget";
+				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.buggygames.autophagy.app.watchkitapp.widget;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		8F3200C6E854600AD0A0230A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Autophagy Watch App/AutophagyWatch.entitlements";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Autophagy;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = cloud.buggygames.autophagy.app;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.buggygames.autophagy.app.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		AF2D74501BF9395AD26D59AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4YN4S8KBCP;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		B9995B04B1598D4EAA3CB74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Autophagy Watch App/AutophagyWatch.entitlements";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Autophagy;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = cloud.buggygames.autophagy.app;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.buggygames.autophagy.app.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		C25FE6ECFEB03EE68B4C532C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Autophagy/Autophagy.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Autophagy;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.buggygames.autophagy.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AE0D9764540F709FC604362 /* Build configuration list for PBXNativeTarget "AutophagyWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4909606A0F818716463F8BB5 /* Debug */,
+				6C4FD532F99820B46539B599 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5DCDDFD1235FC7735DE6AC21 /* Build configuration list for PBXNativeTarget "AutophagyWatchWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				727AC743BE083D2439665E7A /* Debug */,
+				02F17CC4C749A07B29F16F93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5E33CA2AB6818CE23807EECE /* Build configuration list for PBXNativeTarget "Autophagy Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F3200C6E854600AD0A0230A /* Debug */,
+				B9995B04B1598D4EAA3CB74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8E77428810C99D8A4B709976 /* Build configuration list for PBXProject "Autophagy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF2D74501BF9395AD26D59AF /* Debug */,
+				5F4E3CBB330C2FC210F241DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9C8191F4F2367148F75295C7 /* Build configuration list for PBXNativeTarget "Autophagy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25FE6ECFEB03EE68B4C532C /* Debug */,
+				67F273003581B1D10196DFCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66B82D083C9E5A846A510921 /* Project object */;
+}
