@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,7 @@
 		C94C994BF503F1F2B7FDC4EB /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A518C0565133AA7B8F51DA8 /* WatchConnectivityManager.swift */; };
 		CAA541416F78644F494336D9 /* FastingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD343F2C35EB0055D234832E /* FastingSession.swift */; };
 		D1D384C758EE6BB9BF062D4F /* FastingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD343F2C35EB0055D234832E /* FastingSession.swift */; };
+		D61003C44D6F3DFB4B8CCA84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC408CD82C0AD7D742475FE3 /* LaunchScreen.storyboard */; };
 		DE37BFBC08DC7F6C4774290B /* AutophagyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CF89762805432D9C6EBFA /* AutophagyWidget.swift */; };
 		DFF3C4C8DD5948E1B3988106 /* WatchWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E813F5371E6539C6E3888 /* WatchWidgetBundle.swift */; };
 		FEB649D3EC1FD41DC6AE9735 /* WatchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC1BE17BF4C3E5B0B2B833 /* WatchContentView.swift */; };
@@ -99,7 +100,7 @@
 		068E7A276F20E4C9E22502CB /* Autophagy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Autophagy.entitlements; sourceTree = "<group>"; };
 		1D651EF9581D33062AF8FD4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2186A972C0DF171938AE66A0 /* Autophagy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Autophagy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E90F718583EC111CE977B52 /* AutophagyWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AutophagyWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E90F718583EC111CE977B52 /* AutophagyWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = AutophagyWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		43195FC73A37B6B97AE73C0C /* WidgetAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WidgetAssets.xcassets; sourceTree = "<group>"; };
 		56AD7E554885171ACF07BF30 /* AutophagyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutophagyWidgetExtension.entitlements; sourceTree = "<group>"; };
 		630450851DDC7E0E19BB996B /* FastingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingManager.swift; sourceTree = "<group>"; };
@@ -116,9 +117,10 @@
 		9CD32421EDEDDA8FA6A8BDCF /* AutophagyWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutophagyWatch.entitlements; sourceTree = "<group>"; };
 		A7E0B2393E3A1BA8E7E1BC0E /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		BB7CF89762805432D9C6EBFA /* AutophagyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutophagyWidget.swift; sourceTree = "<group>"; };
+		BC408CD82C0AD7D742475FE3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C25E813F5371E6539C6E3888 /* WatchWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchWidgetBundle.swift; sourceTree = "<group>"; };
 		CD343F2C35EB0055D234832E /* FastingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingSession.swift; sourceTree = "<group>"; };
-		DE0400C34DF694938BABD7E4 /* Autophagy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autophagy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE0400C34DF694938BABD7E4 /* Autophagy.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Autophagy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70EA92C2CEEAA2B5C029880 /* WatchAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WatchAssets.xcassets; sourceTree = "<group>"; };
 		EFFE00A6430EE748A0DFE16F /* AutophagyWatchWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AutophagyWatchWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F436E226595A57DD3A7BCABF /* WatchWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchWidget.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				792166306C7F1D595A316ABC /* AutophagyApp.swift */,
 				942094245A2529D72252A7F5 /* ContentView.swift */,
 				A7E0B2393E3A1BA8E7E1BC0E /* HistoryView.swift */,
+				BC408CD82C0AD7D742475FE3 /* LaunchScreen.storyboard */,
 			);
 			path = Autophagy;
 			sourceTree = "<group>";
@@ -296,15 +299,19 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					0555E8E1C24C01E9A3A324AF = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 					BA3462EBB95523367B4545EF = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 					C935F1FAA9312C0B29042F29 = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 					EF05EF5A1FF5CB36DF1C4E68 = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -319,6 +326,7 @@
 			);
 			mainGroup = 199456DA5BD7316801613410;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -360,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B28B28AEFE7B3BE545416F8A /* Assets.xcassets in Resources */,
+				D61003C44D6F3DFB4B8CCA84 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +447,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4YN4S8KBCP;
 				INFOPLIST_FILE = AutophagyWatchWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,7 +466,6 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = AutophagyWidget/AutophagyWidgetExtension.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4YN4S8KBCP;
 				INFOPLIST_FILE = AutophagyWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -535,17 +542,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Autophagy/Autophagy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4YN4S8KBCP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "IF Timer";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_CFBundleDisplayName = Autophagy;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -562,7 +565,6 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = AutophagyWidget/AutophagyWidgetExtension.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4YN4S8KBCP;
 				INFOPLIST_FILE = AutophagyWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -580,7 +582,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4YN4S8KBCP;
 				INFOPLIST_FILE = AutophagyWatchWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -601,7 +602,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Autophagy Watch App/AutophagyWatch.entitlements";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4YN4S8KBCP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Autophagy;
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = cloud.buggygames.autophagy.app;
@@ -685,7 +685,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Autophagy Watch App/AutophagyWatch.entitlements";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4YN4S8KBCP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Autophagy;
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = cloud.buggygames.autophagy.app;
@@ -701,17 +700,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Autophagy/Autophagy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4YN4S8KBCP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "IF Timer";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_CFBundleDisplayName = Autophagy;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
