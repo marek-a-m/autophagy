@@ -2,29 +2,54 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var fastingManager: FastingManager
+    @State private var showingHistory = false
 
     var body: some View {
-        ZStack {
-            backgroundGradient
+        NavigationStack {
+            ZStack {
+                backgroundGradient
 
-            VStack(spacing: 40) {
-                Spacer()
+                VStack(spacing: 40) {
+                    Spacer()
 
-                statusSection
+                    statusSection
 
-                timerSection
+                    timerSection
 
-                Spacer()
+                    Spacer()
 
-                actionButton
+                    actionButton
 
-                if let lastDuration = fastingManager.state.lastFastingDuration, !fastingManager.state.isFasting {
-                    lastFastSection(duration: lastDuration)
+                    if let lastDuration = fastingManager.state.lastFastingDuration, !fastingManager.state.isFasting {
+                        lastFastSection(duration: lastDuration)
+                    }
+
+                    Spacer()
                 }
-
-                Spacer()
+                .padding()
             }
-            .padding()
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showingHistory = true
+                    } label: {
+                        Image(systemName: "clock.arrow.circlepath")
+                            .foregroundColor(.white)
+                    }
+                }
+            }
+            .sheet(isPresented: $showingHistory) {
+                NavigationStack {
+                    HistoryView()
+                        .toolbar {
+                            ToolbarItem(placement: .topBarTrailing) {
+                                Button("Done") {
+                                    showingHistory = false
+                                }
+                            }
+                        }
+                }
+            }
         }
     }
 

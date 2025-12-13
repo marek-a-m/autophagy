@@ -67,7 +67,7 @@ struct SmallWidgetView: View {
     }
 
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 6) {
             HStack {
                 Image(systemName: autophagyActive ? "flame.fill" : "timer")
                     .foregroundColor(autophagyActive ? .green : .orange)
@@ -77,8 +77,10 @@ struct SmallWidgetView: View {
             Spacer()
 
             if state.isFasting {
-                Text(duration.formatted)
-                    .font(.system(size: 24, weight: .medium, design: .monospaced))
+                Text(duration.compactFormatted)
+                    .font(.system(size: 36, weight: .medium, design: .monospaced))
+                    .minimumScaleFactor(0.5)
+                    .lineLimit(1)
                     .foregroundColor(.primary)
 
                 Text(autophagyActive ? "Autophagy" : "Fasting")
@@ -87,6 +89,8 @@ struct SmallWidgetView: View {
             } else {
                 Text("Not Fasting")
                     .font(.headline)
+                    .minimumScaleFactor(0.7)
+                    .lineLimit(1)
                     .foregroundColor(.secondary)
 
                 if let lastDuration = state.lastFastingDuration {
@@ -134,8 +138,10 @@ struct MediumWidgetView: View {
                 }
 
                 if state.isFasting {
-                    Text(duration.formatted)
-                        .font(.system(size: 32, weight: .medium, design: .monospaced))
+                    Text(duration.compactFormatted)
+                        .font(.system(size: 36, weight: .medium, design: .monospaced))
+                        .minimumScaleFactor(0.6)
+                        .lineLimit(1)
                         .foregroundColor(.primary)
                 } else if let lastDuration = state.lastFastingDuration {
                     Text("Last: \(lastDuration.shortFormatted)")
@@ -238,7 +244,7 @@ struct RectangularWidgetView: View {
             }
 
             if state.isFasting {
-                Text(duration.formatted)
+                Text(duration.compactFormatted)
                     .font(.system(.body, design: .monospaced))
 
                 Gauge(value: progress) { }

@@ -115,7 +115,7 @@ struct WatchRectangularView: View {
             }
 
             if state.isFasting {
-                Text(duration.formatted)
+                Text(duration.compactFormatted)
                     .font(.system(.body, design: .monospaced))
                     .fontWeight(.medium)
 

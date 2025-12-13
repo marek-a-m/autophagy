@@ -34,7 +34,7 @@ struct FastingState: Codable, Equatable {
 }
 
 enum AutophagyConstants {
-    static let autophagyThreshold: TimeInterval = 16 * 60 * 60 // 16 hours
+    static let autophagyThreshold: TimeInterval = 24 * 60 * 60 // 24 hours
     static let appGroupIdentifier = "group.cloud.buggygames.autophagy.app"
     static let fastingStateKey = "fastingState"
 }
@@ -72,5 +72,11 @@ extension TimeInterval {
         let hours = Int(self) / 3600
         let minutes = (Int(self) % 3600) / 60
         return String(format: "%dh %dm", hours, minutes)
+    }
+
+    var compactFormatted: String {
+        let hours = Int(self) / 3600
+        let minutes = (Int(self) % 3600) / 60
+        return String(format: "%02d:%02d", hours, minutes)
     }
 }
