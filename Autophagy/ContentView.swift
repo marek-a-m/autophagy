@@ -4,7 +4,9 @@ struct ContentView: View {
     @EnvironmentObject var fastingManager: FastingManager
     @State private var showingHistory = false
     @State private var showingStartFasting = false
+    @State private var showingStopFasting = false
     @State private var selectedStartTime = Date()
+    @State private var selectedEndTime = Date()
 
     var body: some View {
         NavigationStack {
@@ -62,6 +64,21 @@ struct ContentView: View {
                     },
                     onCancel: {
                         showingStartFasting = false
+                    }
+                )
+                .presentationDetents([.height(380)])
+            }
+            .sheet(isPresented: $showingStopFasting) {
+                StopFastingSheet(
+                    fastingStartDate: fastingManager.state.fastingStartDate,
+                    selectedEndTime: $selectedEndTime,
+                    onStop: {
+                        fastingManager.stopFasting(at: selectedEndTime)
+                        WatchConnectivityManager.shared.sendState(fastingManager.state)
+                        showingStopFasting = false
+                    },
+                    onCancel: {
+                        showingStopFasting = false
                     }
                 )
                 .presentationDetents([.height(380)])
@@ -130,10 +147,8 @@ struct ContentView: View {
     private var actionButton: some View {
         Button(action: {
             if fastingManager.state.isFasting {
-                withAnimation(.spring(response: 0.3)) {
-                    fastingManager.stopFasting()
-                    WatchConnectivityManager.shared.sendState(fastingManager.state)
-                }
+                selectedEndTime = Date()
+                showingStopFasting = true
             } else {
                 selectedStartTime = Date()
                 showingStartFasting = true
@@ -164,6 +179,65 @@ struct ContentView: View {
             Text(duration.shortFormatted)
                 .font(.headline)
                 .foregroundColor(.white.opacity(0.7))
+        }
+    }
+}
+
+struct StopFastingSheet: View {
+    let fastingStartDate: Date?
+    @Binding var selectedEndTime: Date
+    let onStop: () -> Void
+    let onCancel: () -> Void
+
+    private var minimumEndTime: Date {
+        fastingStartDate ?? Date().addingTimeInterval(-24 * 60 * 60)
+    }
+
+    var body: some View {
+        VStack(spacing: 16) {
+            // Header
+            HStack {
+                Button("Cancel", action: onCancel)
+                    .foregroundColor(.blue)
+                Spacer()
+                Text("End Fasting")
+                    .font(.headline)
+                Spacer()
+                // Invisible button for balance
+                Button("Cancel") {}
+                    .opacity(0)
+            }
+            .padding(.horizontal)
+            .padding(.top, 16)
+
+            Text("When did you start eating?")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+
+            DatePicker(
+                "End Time",
+                selection: $selectedEndTime,
+                in: minimumEndTime...Date(),
+                displayedComponents: [.date, .hourAndMinute]
+            )
+            .datePickerStyle(.wheel)
+            .labelsHidden()
+            .frame(maxHeight: 180)
+
+            Button(action: onStop) {
+                Text("End Fasting")
+                    .fontWeight(.semibold)
+                    .font(.title3)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(Color.red)
+                    )
+            }
+            .padding(.horizontal)
+            .padding(.bottom, 16)
         }
     }
 }

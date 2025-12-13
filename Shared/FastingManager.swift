@@ -53,17 +53,17 @@ class FastingManager: ObservableObject {
         setupTimer()
     }
 
-    func stopFasting() {
+    func stopFasting(at endDate: Date = Date()) {
         // Save session to history before clearing state
         if let startDate = state.fastingStartDate {
             let session = FastingSession(
                 startDate: startDate,
-                endDate: Date()
+                endDate: endDate
             )
             FastingHistoryManager.shared.addSession(session)
         }
 
-        let duration = state.currentFastingDuration
+        let duration = endDate.timeIntervalSince(state.fastingStartDate ?? endDate)
         state = FastingState(
             isFasting: false,
             fastingStartDate: nil,
