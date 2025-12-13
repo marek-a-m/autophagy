@@ -27,7 +27,7 @@ schemes:
 
 settings:
   base:
-    DEVELOPMENT_TEAM: ""
+    DEVELOPMENT_TEAM: 4YN4S8KBCP
     CODE_SIGN_STYLE: Automatic
     GENERATE_INFOPLIST_FILE: YES
 
