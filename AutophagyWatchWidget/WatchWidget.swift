@@ -22,9 +22,9 @@ struct WatchFastingTimelineProvider: TimelineProvider {
 
         var entries: [WatchFastingEntry] = []
 
-        // Update every minute
-        for minuteOffset in 0..<60 {
-            let entryDate = Calendar.current.date(byAdding: .minute, value: minuteOffset, to: currentDate)!
+        // Update every hour for 24 hours
+        for hourOffset in 0..<24 {
+            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
             entries.append(WatchFastingEntry(date: entryDate, state: state))
         }
 
@@ -70,11 +70,21 @@ struct WatchCircularView: View {
         min(duration / AutophagyConstants.autophagyThreshold, 1.0)
     }
 
+    private var hoursFormatted: String {
+        let hours = Int(duration) / 3600
+        return "\(hours)h"
+    }
+
     var body: some View {
         if state.isFasting {
             Gauge(value: progress) {
-                Image(systemName: autophagyActive ? "flame.fill" : "timer")
-                    .foregroundColor(autophagyActive ? .green : .orange)
+                VStack(spacing: 0) {
+                    Image(systemName: autophagyActive ? "flame.fill" : "timer")
+                        .font(.caption2)
+                        .foregroundColor(autophagyActive ? .green : .orange)
+                    Text(hoursFormatted)
+                        .font(.system(size: 14, weight: .semibold, design: .rounded))
+                }
             }
             .gaugeStyle(.accessoryCircularCapacity)
             .tint(autophagyActive ? .green : .orange)

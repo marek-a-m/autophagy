@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 
 struct WatchContentView: View {
     @EnvironmentObject var fastingManager: FastingManager
@@ -74,6 +75,7 @@ struct WatchContentView: View {
         Button(action: {
             fastingManager.toggleFasting()
             WatchConnectivityManager.shared.sendState(fastingManager.state)
+            WidgetCenter.shared.reloadAllTimelines()
         }) {
             HStack(spacing: 6) {
                 Image(systemName: fastingManager.state.isFasting ? "stop.fill" : "play.fill")

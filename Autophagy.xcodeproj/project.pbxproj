@@ -98,6 +98,7 @@
 
 /* Begin PBXFileReference section */
 		068E7A276F20E4C9E22502CB /* Autophagy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Autophagy.entitlements; sourceTree = "<group>"; };
+		10D4641AC4931A388747E225 /* AutophagyWatchWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutophagyWatchWidgetExtension.entitlements; sourceTree = "<group>"; };
 		1D651EF9581D33062AF8FD4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2186A972C0DF171938AE66A0 /* Autophagy Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Autophagy Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E90F718583EC111CE977B52 /* AutophagyWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = AutophagyWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +188,7 @@
 		7E7AEF9851D1BB1FF6EA2132 /* AutophagyWatchWidget */ = {
 			isa = PBXGroup;
 			children = (
+				10D4641AC4931A388747E225 /* AutophagyWatchWidgetExtension.entitlements */,
 				77008AD90E01123AFF7BCDC2 /* Info.plist */,
 				F436E226595A57DD3A7BCABF /* WatchWidget.swift */,
 				8ADF45D2DAD09E367D745243 /* WatchWidgetAssets.xcassets */,
@@ -446,6 +448,7 @@
 		02F17CC4C749A07B29F16F93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AutophagyWatchWidget/AutophagyWatchWidgetExtension.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = AutophagyWatchWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -584,6 +587,7 @@
 		727AC743BE083D2439665E7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AutophagyWatchWidget/AutophagyWatchWidgetExtension.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = AutophagyWatchWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

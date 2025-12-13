@@ -127,3 +127,8 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: cloud.buggygames.autophagy.app.watchkitapp.widget
         CURRENT_PROJECT_VERSION: 1
         MARKETING_VERSION: 1.0
+    entitlements:
+      path: AutophagyWatchWidget/AutophagyWatchWidgetExtension.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.cloud.buggygames.autophagy.app
