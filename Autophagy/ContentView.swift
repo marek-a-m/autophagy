@@ -3,6 +3,8 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var fastingManager: FastingManager
     @State private var showingHistory = false
+    @State private var showingStartFasting = false
+    @State private var selectedStartTime = Date()
 
     var body: some View {
         NavigationStack {
@@ -49,6 +51,20 @@ struct ContentView: View {
                             }
                         }
                 }
+            }
+            .sheet(isPresented: $showingStartFasting) {
+                StartFastingSheet(
+                    selectedStartTime: $selectedStartTime,
+                    onStart: {
+                        fastingManager.startFasting(from: selectedStartTime)
+                        WatchConnectivityManager.shared.sendState(fastingManager.state)
+                        showingStartFasting = false
+                    },
+                    onCancel: {
+                        showingStartFasting = false
+                    }
+                )
+                .presentationDetents([.height(380)])
             }
         }
     }
@@ -113,14 +129,19 @@ struct ContentView: View {
 
     private var actionButton: some View {
         Button(action: {
-            withAnimation(.spring(response: 0.3)) {
-                fastingManager.toggleFasting()
-                WatchConnectivityManager.shared.sendState(fastingManager.state)
+            if fastingManager.state.isFasting {
+                withAnimation(.spring(response: 0.3)) {
+                    fastingManager.stopFasting()
+                    WatchConnectivityManager.shared.sendState(fastingManager.state)
+                }
+            } else {
+                selectedStartTime = Date()
+                showingStartFasting = true
             }
         }) {
             HStack(spacing: 12) {
                 Image(systemName: fastingManager.state.isFasting ? "stop.fill" : "play.fill")
-                Text(fastingManager.state.isFasting ? "End Fast" : "Start Fast")
+                Text(fastingManager.state.isFasting ? "End Fasting" : "Start Fasting")
                     .fontWeight(.semibold)
             }
             .font(.title3)
@@ -143,6 +164,60 @@ struct ContentView: View {
             Text(duration.shortFormatted)
                 .font(.headline)
                 .foregroundColor(.white.opacity(0.7))
+        }
+    }
+}
+
+struct StartFastingSheet: View {
+    @Binding var selectedStartTime: Date
+    let onStart: () -> Void
+    let onCancel: () -> Void
+
+    var body: some View {
+        VStack(spacing: 16) {
+            // Header
+            HStack {
+                Button("Cancel", action: onCancel)
+                    .foregroundColor(.blue)
+                Spacer()
+                Text("Start Fasting")
+                    .font(.headline)
+                Spacer()
+                // Invisible button for balance
+                Button("Cancel") {}
+                    .opacity(0)
+            }
+            .padding(.horizontal)
+            .padding(.top, 16)
+
+            Text("When did you stop eating?")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+
+            DatePicker(
+                "Start Time",
+                selection: $selectedStartTime,
+                in: ...Date(),
+                displayedComponents: [.date, .hourAndMinute]
+            )
+            .datePickerStyle(.wheel)
+            .labelsHidden()
+            .frame(maxHeight: 180)
+
+            Button(action: onStart) {
+                Text("Start Fasting")
+                    .fontWeight(.semibold)
+                    .font(.title3)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(Color.green)
+                    )
+            }
+            .padding(.horizontal)
+            .padding(.bottom, 16)
         }
     }
 }

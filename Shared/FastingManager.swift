@@ -44,10 +44,10 @@ class FastingManager: ObservableObject {
         }
     }
 
-    func startFasting() {
+    func startFasting(from startDate: Date = Date()) {
         state = FastingState(
             isFasting: true,
-            fastingStartDate: Date(),
+            fastingStartDate: startDate,
             lastFastingDuration: state.lastFastingDuration
         )
         setupTimer()
