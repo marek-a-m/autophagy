@@ -22,9 +22,10 @@ struct WatchFastingTimelineProvider: TimelineProvider {
 
         var entries: [WatchFastingEntry] = []
 
-        // Update every hour for 24 hours
-        for hourOffset in 0..<24 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
+        // Generate entries every 15 minutes for 4 hours (for progress bar updates)
+        // Text(date, style: .timer) updates automatically without budget cost
+        for minuteOffset in stride(from: 0, to: 240, by: 15) {
+            let entryDate = Calendar.current.date(byAdding: .minute, value: minuteOffset, to: currentDate)!
             entries.append(WatchFastingEntry(date: entryDate, state: state))
         }
 
@@ -70,20 +71,18 @@ struct WatchCircularView: View {
         min(duration / AutophagyConstants.autophagyThreshold, 1.0)
     }
 
-    private var hoursFormatted: String {
-        let hours = Int(duration) / 3600
-        return "\(hours)h"
-    }
-
     var body: some View {
-        if state.isFasting {
+        if state.isFasting, let startDate = state.fastingStartDate {
             Gauge(value: progress) {
                 VStack(spacing: 0) {
                     Image(systemName: autophagyActive ? "flame.fill" : "timer")
                         .font(.caption2)
                         .foregroundColor(autophagyActive ? .green : .orange)
-                    Text(hoursFormatted)
-                        .font(.system(size: 14, weight: .semibold, design: .rounded))
+                    // Auto-updating timer - no refresh budget cost
+                    Text(startDate, style: .timer)
+                        .font(.system(size: 11, weight: .medium, design: .monospaced))
+                        .minimumScaleFactor(0.6)
+                        .multilineTextAlignment(.center)
                 }
             }
             .gaugeStyle(.accessoryCircularCapacity)
@@ -124,8 +123,9 @@ struct WatchRectangularView: View {
                     .font(.headline)
             }
 
-            if state.isFasting {
-                Text(duration.compactFormatted)
+            if state.isFasting, let startDate = state.fastingStartDate {
+                // Auto-updating timer - no refresh budget cost
+                Text(startDate, style: .timer)
                     .font(.system(.body, design: .monospaced))
                     .fontWeight(.medium)
 
@@ -155,10 +155,10 @@ struct WatchInlineView: View {
     }
 
     var body: some View {
-        if state.isFasting {
+        if state.isFasting, let startDate = state.fastingStartDate {
             HStack(spacing: 4) {
                 Image(systemName: autophagyActive ? "flame.fill" : "timer")
-                Text(duration.shortFormatted)
+                Text(startDate, style: .timer)
             }
         } else {
             Text("Not Fasting")
@@ -184,8 +184,8 @@ struct WatchCornerView: View {
     }
 
     var body: some View {
-        if state.isFasting {
-            Text(duration.shortFormatted)
+        if state.isFasting, let startDate = state.fastingStartDate {
+            Text(startDate, style: .timer)
                 .font(.system(size: 14, weight: .medium))
                 .widgetCurvesContent()
                 .widgetLabel {

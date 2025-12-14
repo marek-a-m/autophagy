@@ -1,5 +1,6 @@
 import Foundation
 import WatchConnectivity
+import WidgetKit
 
 class WatchConnectivityManager: NSObject, ObservableObject {
     static let shared = WatchConnectivityManager()
@@ -21,6 +22,10 @@ class WatchConnectivityManager: NSObject, ObservableObject {
         #if os(iOS)
         if WCSession.default.isWatchAppInstalled {
             try? WCSession.default.updateApplicationContext(message)
+            // Also send complication update for immediate widget refresh
+            if WCSession.default.isComplicationEnabled {
+                WCSession.default.transferCurrentComplicationUserInfo(message)
+            }
         }
         #else
         if WCSession.default.isCompanionAppInstalled {
@@ -45,7 +50,19 @@ extension WatchConnectivityManager: WCSessionDelegate {
     #endif
 
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
-        guard let data = applicationContext["state"] as? Data,
+        handleReceivedState(applicationContext)
+    }
+
+    #if os(watchOS)
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
+        handleReceivedState(userInfo)
+        // Immediately reload widget when receiving complication update from iPhone
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+    #endif
+
+    private func handleReceivedState(_ data: [String: Any]) {
+        guard let data = data["state"] as? Data,
               let state = try? JSONDecoder().decode(FastingState.self, from: data) else { return }
 
         Task { @MainActor in
