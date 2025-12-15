@@ -45,8 +45,14 @@ struct HistoryView: View {
             } else {
                 ForEach(historyManager.sessions) { session in
                     SessionRow(session: session)
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                historyManager.deleteSession(session)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
                 }
-                .onDelete(perform: historyManager.deleteSession)
             }
         }
     }
