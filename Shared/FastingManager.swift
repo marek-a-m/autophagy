@@ -86,4 +86,12 @@ class FastingManager: ObservableObject {
         state = newState
         setupTimer()
     }
+
+    func refreshFromStorage() {
+        let loadedState = FastingState.load()
+        if loadedState != state {
+            state = loadedState
+            setupTimer()
+        }
+    }
 }
